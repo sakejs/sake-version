@@ -10,7 +10,9 @@ module.exports = ->
       console.log 'working directory not clean'
       return
 
+    console.log 'yield'
     yield invoke 'build:min' if tasks.has 'build:min'
+    console.log 'yield after'
 
     dir        = process.cwd()
     pkgPath    = path.join dir, 'package'
