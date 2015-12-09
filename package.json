@@ -8,6 +8,7 @@
   },
   "dependencies": {},
   "devDependencies": {
+    "cake-publish": "^0.1.1",
     "chai": "^3.4.1",
     "chai-as-promised": "^5.1.0",
     "co-mocha": "^1.1.2",
