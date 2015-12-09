@@ -1,5 +1,7 @@
 require 'shortcake'
 
+use require './'
+
 option '-b', '--browser [browser]', 'browser to use for tests'
 option '-g', '--grep [filter]',     'test filter'
 option '-t', '--test [test]',       'specify test to run'
