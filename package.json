@@ -17,7 +17,7 @@
     "coffee-script": "^1.10.0",
     "mocha": "^2.3.4",
     "postmortem": "^0.2.3",
-    "shortcake": "^1.1.8"
+    "shortcake": "^1.1.10"
   },
   "scripts": {
     "test": "cake test",
