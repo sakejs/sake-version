@@ -8,12 +8,12 @@ module.exports = ->
     {stdout, stderr} = yield exec.quiet 'git status --porcelain'
     if stderr or stdout
       console.log 'working directory not clean'
-      # return
+      return
 
     yield invoke 'build:min' if tasks.has 'build:min'
 
     dir        = process.cwd()
-    pkgPath    = path.join dir, 'package'
+    pkgPath    = path.join dir, 'package.json'
     readmePath = path.join dir, 'README.md'
 
     pkg        = require pkgPath
