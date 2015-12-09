@@ -1,3 +1,5 @@
+path = require 'path'
+
 module.exports = ->
   task 'major', ['version'], ->
   task 'minor', ['version'], ->
@@ -11,8 +13,8 @@ module.exports = ->
     yield invoke 'build:min' if tasks.has 'build:min'
 
     dir        = process.cwd()
-    pkgPath    = dir + '/package'
-    readmePath = dir + '/README.md'
+    pkgPath    = path.join dir, 'package'
+    readmePath = path.join dir, 'README.md'
 
     pkg        = require pkgPath
     version    = pkg.version
