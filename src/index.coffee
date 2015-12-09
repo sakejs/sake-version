@@ -1,3 +1,4 @@
+fs   = require 'fs'
 path = require 'path'
 
 module.exports = ->
@@ -8,7 +9,7 @@ module.exports = ->
     {stdout, stderr} = yield exec.quiet 'git status --porcelain'
     if stderr or stdout
       console.log 'working directory not clean'
-      return
+      # return
 
     yield invoke 'build:min' if tasks.has 'build:min'
 
@@ -39,6 +40,8 @@ module.exports = ->
     data = fs.readFileSync readmePath, 'utf8'
     data = data.replace (new RegExp version, 'g'), newVersion
     fs.writeFileSync readmePath, data, 'utf8'
+
+    console.log pkgPath
 
     pkg.version = newVersion
     fs.writeFileSync pkgPath, (JSON.stringify pkg, null, 2), 'utf8'
