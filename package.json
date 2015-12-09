@@ -7,8 +7,6 @@
     "test": "test"
   },
   "dependencies": {
-    "postmortem": "^0.2.4",
-    "shortcake": "^1.1.9"
   },
   "devDependencies": {
     "chai": "^3.4.1",
