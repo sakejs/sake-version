@@ -38,10 +38,3 @@ task 'test', 'Run tests', (opts, cb) ->
 
 task 'watch', 'watch for changes and recompile project', ->
   exec 'coffee -bc -m -w -o lib/ src/'
-
-task 'publish', 'publish project', (options) ->
-  exec '''
-  git push
-  git push --tags
-  npm publish
-  '''
