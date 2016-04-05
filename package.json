@@ -1,6 +1,6 @@
 {
   "name": "cake-version",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Use chai assertians in mocha tasks.",
   "main": "lib/",
   "directories": {
