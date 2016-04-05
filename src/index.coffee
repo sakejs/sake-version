@@ -1,6 +1,5 @@
-fs     = require 'fs'
-path   = require 'path'
-semver = require 'semver'
+fs   = require 'fs'
+path = require 'path'
 
 outdated = require './outdated'
 
@@ -15,14 +14,10 @@ module.exports = ->
       return
 
     # Check for outdated deps
-    deps = yield outdated()
-
-    invalid = false
-    for k,v of deps
-      if semver.gt v.current, v.wanted
-        invalid = true
-        console.error "#{k}@#{v.current} is installed but #{v.wanted} is specified in package.json"
-    return if invalid
+    if (deps = yield outdated())?
+      for dep in deps
+        console.error "#{dep.name} #{dep.current} is installed but #{dep.wanted} is specified in package.json"
+      return
 
     # Run build process
     yield invoke 'build:min' if tasks.has 'build:min'
