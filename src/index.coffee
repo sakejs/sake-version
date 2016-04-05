@@ -19,7 +19,7 @@ module.exports = ->
 
     for k,v of deps
       if semver.gt v.current, v.wanted
-        console.log "'#{k}' #{v.current} is installed but #{v.wanted} is referenced in your package.json"
+        console.error "#{k}@#{v.current} is installed but #{v.wanted} is specified in package.json"
         return
 
     # Run build process
