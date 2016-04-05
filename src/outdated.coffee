@@ -2,7 +2,7 @@ exec = require 'executive'
 
 module.exports = ->
   new Promise (resolve, reject) ->
-    exec 'npm outdated --json'
+    exec.quiet 'npm outdated --json'
       .then ({stdout}) ->
         return resolve {} if stdout == ''
         deps = JSON.parse stdout
