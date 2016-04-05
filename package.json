@@ -6,7 +6,9 @@
   "directories": {
     "test": "test"
   },
-  "dependencies": {},
+  "dependencies": {
+    "semver": "5.1.0"
+  },
   "devDependencies": {
     "cake-publish": "^0.1.1",
     "chai": "^3.4.1",

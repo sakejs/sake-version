@@ -1,6 +1,6 @@
 require 'shortcake'
 
-use require './'
+use require './src'
 use 'cake-publish'
 
 option '-b', '--browser [browser]', 'browser to use for tests'
