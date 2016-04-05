@@ -17,10 +17,12 @@ module.exports = ->
     # Check for outdated deps
     deps = yield outdated()
 
+    invalid = false
     for k,v of deps
       if semver.gt v.current, v.wanted
+        invalid = true
         console.error "#{k}@#{v.current} is installed but #{v.wanted} is specified in package.json"
-        return
+    return if invalid
 
     # Run build process
     yield invoke 'build:min' if tasks.has 'build:min'
