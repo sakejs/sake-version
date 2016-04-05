@@ -1,5 +1,8 @@
-fs   = require 'fs'
-path = require 'path'
+fs     = require 'fs'
+path   = require 'path'
+semver = require 'semver'
+
+outdated = require './outdated'
 
 module.exports = ->
   task 'major', ['version'], ->
@@ -11,6 +14,15 @@ module.exports = ->
       console.log 'working directory not clean'
       return
 
+    # Check for outdated deps
+    deps = yield outdated()
+
+    for k,v of deps
+      if semver.gt v.current, v.wanted
+        console.log "'#{k}' #{v.current} is installed but #{v.wanted} is referenced in your package.json"
+        return
+
+    # Run build process
     yield invoke 'build:min' if tasks.has 'build:min'
 
     dir        = process.cwd()
