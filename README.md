@@ -1,4 +1,6 @@
 # cake-version [![NPM version][npm-img]][npm-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url] [![Dependency Status][dependency-img]][dependency-url] [![Gitter chat][gitter-img]][gitter-url]
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/zeekay/cake-version.svg)](https://greenkeeper.io/)
 Automatically tag versions with git and bump version in local files and
 package.json.
 
