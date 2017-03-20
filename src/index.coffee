@@ -4,9 +4,10 @@ path = require 'path'
 outdated = require './outdated'
 
 module.exports = ->
-  task 'major', ['version'], ->
-  task 'minor', ['version'], ->
-  task 'patch', ['version'], ->
+  task 'version:major', 'increment major version', ['version'], ->
+  task 'version:minor', 'increment minor version', ['version'], ->
+  task 'version:patch', 'increment patch version', ['version'], ->
+
   task 'version', 'change version of project', (opts) ->
     {stdout, stderr} = yield exec.quiet 'git status --porcelain'
     if stderr or stdout
@@ -33,11 +34,11 @@ module.exports = ->
     [major, minor, patch] = (parseInt n for n in version.split '.')
 
     switch level
-      when 'major'
+      when 'version:major', 'major'
         newVersion = "#{major + 1}.0.0"
-      when 'minor'
+      when 'version:minor', 'minor'
         newVersion = "#{major}.#{minor + 1}.0"
-      when 'patch'
+      when 'version:patch', 'patch'
         newVersion = "#{major}.#{minor}.#{patch + 1}"
       else
         console.log 'Unable to parse versioning'
