@@ -9,11 +9,9 @@ task 'clean', 'clean project', ->
   exec 'rm -rf lib'
 
 task 'build', 'build project', ->
-  b = yield bundle.write
+  bundle.write
     entry:    'src/index.coffee'
-    external: true
-
-  yield b.write formats:  ['cjs', 'es']
+    formats:  ['cjs', 'es']
 
 task 'test', 'Run tests', (opts, cb) ->
   grep    = opts.grep             ? ''
