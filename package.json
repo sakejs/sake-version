@@ -13,7 +13,7 @@
     "test": "test"
   },
   "dependencies": {
-    "executive": "1.1.9",
+    "executive": "1.2.5",
     "semver": "5.3.0"
   },
   "devDependencies": {
