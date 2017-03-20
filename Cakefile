@@ -1,18 +1,19 @@
 require 'shortcake'
 
-use require './src'
+use 'cake-bundle'
 use 'cake-publish'
-
-option '-b', '--browser [browser]', 'browser to use for tests'
-option '-g', '--grep [filter]',     'test filter'
-option '-t', '--test [test]',       'specify test to run'
-option '-v', '--verbose',           'enable verbose test logging'
+use 'cake-outdated'
+use require './src'
 
 task 'clean', 'clean project', ->
   exec 'rm -rf lib'
 
 task 'build', 'build project', ->
-  exec 'node_modules/.bin/coffee -bcm -o lib/ src/'
+  b = yield bundle.write
+    entry:    'src/index.coffee'
+    external: true
+
+  yield b.write formats:  ['cjs', 'es']
 
 task 'test', 'Run tests', (opts, cb) ->
   grep    = opts.grep             ? ''
@@ -38,4 +39,14 @@ task 'test', 'Run tests', (opts, cb) ->
       process.exit 0
 
 task 'watch', 'watch for changes and recompile project', ->
-  exec 'coffee -bc -m -w -o lib/ src/'
+  b = yield bundle
+    entry:    'src/index.coffee'
+    external: true
+
+  build = (filename) ->
+    console.log filename
+    b.write
+      invalidate: [filename]
+      formats:    ['cjs', 'es']
+
+  watch 'src/*', build
