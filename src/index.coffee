@@ -1,9 +1,9 @@
-fs   = require 'fs'
-path = require 'path'
+import fs   from 'fs'
+import path from 'path'
 
-outdated = require './outdated'
+import outdated from './outdated'
 
-module.exports = ->
+export default (opts) ->
   task 'version:major', 'increment major version', ['version'], ->
   task 'version:minor', 'increment minor version', ['version'], ->
   task 'version:patch', 'increment patch version', ['version'], ->

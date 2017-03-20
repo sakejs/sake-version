@@ -1,7 +1,7 @@
-exec   = require 'executive'
-semver = require 'semver'
+import exec   from 'executive'
+import semver from 'semver'
 
-module.exports = ->
+export default ->
   new Promise (resolve, reject) ->
     exec.quiet 'npm outdated --json'
       .then ({stdout}) ->

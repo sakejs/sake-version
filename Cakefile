@@ -3,7 +3,8 @@ require 'shortcake'
 use 'cake-bundle'
 use 'cake-publish'
 use 'cake-outdated'
-use require './src'
+
+use require './'
 
 task 'clean', 'clean project', ->
   exec 'rm -rf lib'
