@@ -17,8 +17,8 @@
     "semver": "5.3.0"
   },
   "devDependencies": {
-    "cake-bundle": "0.1.10",
-    "cake-outdated": "0.1.11",
+    "cake-bundle": "0.1.20",
+    "cake-outdated": "0.1.12",
     "cake-publish": "0.1.5",
     "chai": "^3.4.1",
     "chai-as-promised": "6.0.0",
