@@ -1,4 +1,3 @@
-import exec   from 'executive'
 import semver from 'semver'
 
 export default ->
