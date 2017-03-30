@@ -3,7 +3,7 @@ import path from 'path'
 
 import outdated from './outdated'
 
-export default (opts) ->
+export default (opts = {}) ->
   task 'version:major', 'increment major version', ['version'], ->
   task 'version:minor', 'increment minor version', ['version'], ->
   task 'version:patch', 'increment patch version', ['version'], ->
@@ -12,16 +12,17 @@ export default (opts) ->
     {stdout, stderr} = yield exec.quiet 'git status --porcelain'
     if stderr or stdout
       console.log 'working directory not clean'
-      return
+      process.exit 1
 
     # Check for outdated deps
     if (deps = yield outdated())?
       for dep in deps
         console.error "#{dep.name} #{dep.current} is installed but #{dep.wanted} is specified in package.json"
-      return
+      process.exit 1
 
     # Run build process
-    yield invoke 'build:min' if tasks.has 'build:min'
+    if opts.before? and tasks.has opts.before
+      yield invoke opts.before
 
     dir        = process.cwd()
     pkgPath    = path.join dir, 'package.json'
