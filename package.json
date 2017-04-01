@@ -2,12 +2,11 @@
   "name": "cake-version",
   "version": "0.1.14",
   "description": "Use chai assertians in mocha tasks.",
-  "main": "dist/lib.js",
-  "module": "dist/lib.mjs",
+  "main": "lib/cake-version.js",
+  "module": "lib/cake-version.mjs",
   "files": [
-    "README.md",
-    "LICENSE",
-    "dist/"
+    "lib/",
+    "src/"
   ],
   "directories": {
     "test": "test"
