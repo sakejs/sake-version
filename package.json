@@ -15,8 +15,8 @@
     "semver": "5.3.0"
   },
   "devDependencies": {
-    "cake-bundle": "0.2.16",
-    "cake-outdated": "0.1.16",
+    "cake-bundle": "0.2.20",
+    "cake-outdated": "0.1.18",
     "cake-publish": "0.1.10",
     "chai": "^3.4.1",
     "chai-as-promised": "6.0.0",
@@ -24,7 +24,7 @@
     "coffee-script": "1.12.4",
     "mocha": "3.2.0",
     "postmortem": "^0.2.3",
-    "shortcake": "1.2.5"
+    "shortcake": "1.2.8"
   },
   "scripts": {
     "test": "cake test",
