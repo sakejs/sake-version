@@ -1,9 +1,9 @@
 {
-  "name": "cake-version",
+  "name": "sake-version",
   "version": "0.1.15",
   "description": "Use chai assertians in mocha tasks.",
-  "main": "lib/cake-version.js",
-  "module": "lib/cake-version.mjs",
+  "main": "lib/sake-version.js",
+  "module": "lib/sake-version.mjs",
   "files": [
     "lib/",
     "src/"
@@ -15,30 +15,30 @@
     "semver": "5.3.0"
   },
   "devDependencies": {
-    "cake-bundle": "0.2.20",
-    "cake-outdated": "0.1.18",
-    "cake-publish": "0.1.10",
+    "sake-bundle": "0.2.20",
+    "sake-outdated": "0.1.18",
+    "sake-publish": "0.1.10",
     "chai": "^3.4.1",
     "chai-as-promised": "6.0.0",
     "co-mocha": "1.2.0",
     "coffee-script": "1.12.4",
     "mocha": "3.2.0",
     "postmortem": "^0.2.3",
-    "shortcake": "1.2.8"
+    "shortsake": "1.2.8"
   },
   "scripts": {
-    "test": "cake test",
-    "prepublishOnly": "cake build"
+    "test": "sake test",
+    "prepublishOnly": "sake build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zeekay/cake-version.git"
+    "url": "git+https://github.com/sakejs/sake-version.git"
   },
   "keywords": [],
-  "author": "Zach Kelling <z@zeekay.io>",
+  "author": "Hanzo, Inc <hi@hanzo.io",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/zeekay/cake-version/issues"
+    "url": "https://github.com/sakejs/sake-version/issues"
   },
-  "homepage": "https://github.com/zeekay/cake-version#readme"
+  "homepage": "https://github.com/sakejs/sake-version#readme"
 }
