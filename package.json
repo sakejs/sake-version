@@ -1,6 +1,6 @@
 {
   "name": "sake-version",
-  "version": "0.1.15",
+  "version": "0.1.16",
   "description": "Use chai assertians in mocha tasks.",
   "main": "lib/sake-version.js",
   "module": "lib/sake-version.mjs",
