@@ -1,18 +1,14 @@
-require 'shortcake'
-
-use 'cake-bundle'
 use 'cake-outdated'
-use 'cake-publish'
+use 'cake-bundle'
+use 'sake-publish'
 
-use require './'
+# use require './'
 
 task 'clean', 'clean project', ->
   exec 'rm -rf lib'
 
 task 'build', 'build project', ->
-  bundle.write
-    entry:    'src/index.coffee'
-    formats:  ['cjs', 'es']
+  bundle.write entry: 'src/index.coffee'
 
 task 'test', 'Run tests', (opts, cb) ->
   grep    = opts.grep             ? ''

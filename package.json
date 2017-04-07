@@ -15,16 +15,15 @@
     "semver": "5.3.0"
   },
   "devDependencies": {
-    "sake-bundle": "0.2.20",
-    "sake-outdated": "0.1.18",
-    "sake-publish": "0.1.10",
-    "chai": "^3.4.1",
+    "chai": "3.4.1",
     "chai-as-promised": "6.0.0",
     "co-mocha": "1.2.0",
     "coffee-script": "1.12.4",
     "mocha": "3.2.0",
-    "postmortem": "^0.2.3",
-    "shortsake": "1.2.8"
+    "postmortem": "0.2.3",
+    "sake-bundle": "0.4.0",
+    "sake-outdated": "0.1.18",
+    "sake-publish": "0.1.10"
   },
   "scripts": {
     "test": "sake test",
@@ -36,7 +35,7 @@
   },
   "keywords": [],
   "author": "Hanzo, Inc. <hi@hanzo.io",
-  "license": "BSD",
+  "license": "BSD-3-Clause",
   "bugs": {
     "url": "https://github.com/sakejs/sake-version/issues"
   },
