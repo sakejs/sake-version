@@ -2,7 +2,7 @@ use 'cake-outdated'
 use 'cake-bundle'
 use 'sake-publish'
 
-# use require './'
+use require './'
 
 task 'clean', 'clean project', ->
   exec 'rm -rf lib'
