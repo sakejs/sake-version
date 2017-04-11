@@ -1,3 +1,1 @@
-require 'shortcake'
-
-use do require '../'
+use require '../'
