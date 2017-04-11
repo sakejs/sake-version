@@ -16,7 +16,8 @@
     "sake-cli": "0.3.2",
     "sake-core": "1.3.7",
     "sake-outdated": "0.1.19",
-    "sake-publish": "0.1.11"
+    "sake-publish": "0.1.11",
+    "sake-test": "0.1.3"
   },
   "scripts": {
     "build": "sake build",
