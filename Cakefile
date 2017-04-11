@@ -1,5 +1,5 @@
-use 'sake-outdated'
 use 'sake-bundle'
+use 'sake-outdated'
 use 'sake-publish'
 
 try
