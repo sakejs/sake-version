@@ -1,9 +1,8 @@
 exec = require 'executive'
 
-describe 'cake-version', ->
+describe 'sake-version', ->
   it 'should add tasks', ->
     {stdout} = yield exec 'sake', cwd: __dirname
-    stdout.should.contain 'version'
-    stdout.should.contain 'patch'
-    stdout.should.contain 'minor'
-    stdout.should.contain 'major'
+    stdout.should.contain 'version:patch'
+    stdout.should.contain 'version:minor'
+    stdout.should.contain 'version:major'
