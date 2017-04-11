@@ -1,32 +1,40 @@
-# cake-version [![NPM version][npm-img]][npm-url] [![Build Status][travis-img]][travis-url] [![Coverage Status][coveralls-img]][coveralls-url] [![Dependency Status][dependency-img]][dependency-url] [![Gitter chat][gitter-img]][gitter-url]
-Automatically tag versions with git and bump version in local files and
-package.json.
+# sake-version
+
+[![npm][npm-img]][npm-url]
+[![build][build-img]][build-url]
+[![dependencies][dependencies-img]][dependencies-url]
+[![downloads][downloads-img]][downloads-url]
+[![license][license-img]][license-url]
+[![chat][chat-img]][chat-url]
+
+Add `version` update tasks to your Sakefile.
 
 ## Install
 ```bash
-$ npm install cake-version
+$ npm install sake-version --save-dev
 ```
 
 ## Usage
-```coffee
-require 'shortcake'
+In your Sakefile:
 
-use do require 'cake-version`'
+```javascript
+use('sake-version')
 ```
 
-[travis-img]:     https://img.shields.io/travis/zeekay/cake-version.svg
-[travis-url]:     https://travis-ci.org/zeekay/cake-version
-[coveralls-img]:  https://coveralls.io/repos/zeekay/cake-version/badge.svg?branch=master&service=github
-[coveralls-url]:  https://coveralls.io/github/zeekay/cake-version?branch=master
-[dependency-url]: https://david-dm.org/zeekay/cake-version
-[dependency-img]: https://david-dm.org/zeekay/cake-version.svg
-[npm-img]:        https://img.shields.io/npm/v/cake-version.svg
-[npm-url]:        https://www.npmjs.com/package/cake-version
-[gitter-img]:     https://badges.gitter.im/join-chat.svg
-[gitter-url]:     https://gitter.im/zeekay/hi
+## License
+[BSD][license-url]
 
-<!-- not used -->
-[downloads-img]:     https://img.shields.io/npm/dm/cake-version.svg
-[downloads-url]:     http://badge.fury.io/js/cake-version
-[devdependency-img]: https://david-dm.org/zeekay/cake-version/dev-status.svg
-[devdependency-url]: https://david-dm.org/zeekay/cake-version#info=devDependencies
+[build-img]:        https://img.shields.io/travis/sakejs/sake-version.svg
+[build-url]:        https://travis-ci.org/sakejs/sake-version
+[chat-img]:         https://badges.gitter.im/join-chat.svg
+[chat-url]:         https://gitter.im/sakejs/hi
+[coverage-img]:     https://coveralls.io/repos/sakejs/sake-version/badge.svg?branch=master&service=github
+[coverage-url]:     https://coveralls.io/github/sakejs/sake-version?branch=master
+[dependencies-img]: https://david-dm.org/sakejs/sake-version.svg
+[dependencies-url]: https://david-dm.org/sakejs/sake-version
+[downloads-img]:    https://img.shields.io/npm/dm/sake-version.svg
+[downloads-url]:    http://badge.fury.io/js/sake-version
+[license-img]:      https://img.shields.io/npm/l/sake-version.svg
+[license-url]:      https://github.com/sakejs/sake-version/blob/master/LICENSE
+[npm-img]:          https://img.shields.io/npm/v/sake-version.svg
+[npm-url]:          https://www.npmjs.com/package/sake-version
