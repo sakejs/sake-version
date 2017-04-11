@@ -1,7 +1,7 @@
 {
   "name": "sake-version",
   "version": "0.1.16",
-  "description": "Add version update tasks for Sake",
+  "description": "Add `version' tasks to Sake",
   "main": "lib/sake-version.js",
   "module": "lib/sake-version.mjs",
   "files": [
