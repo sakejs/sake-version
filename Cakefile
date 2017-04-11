@@ -1,8 +1,10 @@
-use 'cake-outdated'
-use 'cake-bundle'
+use 'sake-outdated'
+use 'sake-bundle'
 use 'sake-publish'
 
-use require './'
+try
+  use require './'
+catch err
 
 task 'clean', 'clean project', ->
   exec 'rm -rf lib'
