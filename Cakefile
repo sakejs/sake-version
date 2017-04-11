@@ -1,6 +1,7 @@
 use 'sake-bundle'
 use 'sake-outdated'
 use 'sake-publish'
+use 'sake-test'
 
 try
   use require './'
@@ -14,29 +15,6 @@ task 'build', 'build project', ->
     entry: 'src/index.coffee'
     compilers:
       coffee: version: 1
-
-task 'test', 'Run tests', (opts, cb) ->
-  grep    = opts.grep             ? ''
-  test    = opts.test             ? 'test/'
-  verbose = opts.verbose          ? ''
-
-  grep    = "--grep #{opts.grep}" if grep
-  verbose = "VERBOSE=true" if verbose
-
-  exec "NODE_ENV=test #{verbose}
-        node_modules/.bin/mocha
-        --colors
-        --reporter spec
-        --timeout 100000
-        --compilers coffee:coffee-script/register
-        --require co-mocha
-        --require postmortem/register
-        #{grep}
-        #{test}", (err) ->
-    if err
-      process.exit 1
-    else
-      process.exit 0
 
 task 'watch', 'watch for changes and recompile project', ->
   b = yield bundle
