@@ -9,15 +9,15 @@
     "src/"
   ],
   "dependencies": {
-    "semver": "^5.3.0"
+    "semver": "^5.5.0"
   },
   "devDependencies": {
-    "coffeescript": "^1.12.6",
-    "sake-bundle": "^0.5.3",
-    "sake-cli": "^0.5.11",
-    "sake-outdated": "^0.1.27",
-    "sake-publish": "^0.1.16",
-    "sake-test": "^0.1.5"
+    "coffeescript": "^2.2.3",
+    "sake-bundle": "^0.6.7",
+    "sake-cli": "^0.6.5",
+    "sake-outdated": "^0.2.2",
+    "sake-publish": "^0.1.17",
+    "sake-test": "^0.2.1"
   },
   "scripts": {
     "build": "sake build",
