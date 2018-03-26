@@ -9,10 +9,10 @@
     "src/"
   ],
   "dependencies": {
-    "semver": "5.3.0"
+    "semver": "^5.3.0"
   },
   "devDependencies": {
-    "coffee-script": "1.12.6",
+    "coffeescript": "^1.12.6",
     "sake-bundle": "^0.5.3",
     "sake-cli": "^0.5.11",
     "sake-outdated": "^0.1.27",
